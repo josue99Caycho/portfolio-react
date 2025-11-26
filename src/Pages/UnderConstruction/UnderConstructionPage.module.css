@@ -1,0 +1,146 @@
+.background {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background:
+    radial-gradient(circle at top left, #1b944f33, transparent 60%),
+    radial-gradient(circle at bottom right, #0b3b2533, transparent 55%),
+    #020904;
+  color: #e9f8f0;
+}
+
+/* Reutilizado por CenteredPage (clases globales) */
+.construction-page-root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.construction-card-root {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  padding: 2.5rem 2.25rem 2rem;
+  border-radius: 1.5rem;
+  background: rgba(4, 18, 11, 0.92);
+  border: 1px solid rgba(124, 242, 180, 0.22);
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(2, 8, 4, 0.8);
+  backdrop-filter: blur(18px);
+}
+
+.badge {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border: 1px solid rgba(124, 242, 180, 0.5);
+  background: linear-gradient(
+    120deg,
+    rgba(9, 39, 23, 0.95),
+    rgba(18, 81, 46, 0.95)
+  );
+  color: #7cf2b4;
+}
+
+.iconWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.75rem;
+}
+
+.devSvg {
+  width: 180px;
+  height: 180px;
+  filter: drop-shadow(0 14px 34px rgba(6, 41, 22, 0.9));
+  animation: float 4.5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.title {
+  margin: 0 0 0.5rem;
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #f4fff9;
+}
+
+.subtitle {
+  margin: 0 0 1.5rem;
+  text-align: center;
+  font-size: 0.98rem;
+  color: #c0e9d3;
+}
+
+.statusPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(124, 242, 180, 0.4);
+  background: radial-gradient(circle at top left, #1f8a4d, #0b3b23);
+  color: #e9f8f0;
+  font-size: 0.8rem;
+  margin: 0 auto 1.4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.statusDot {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: #7cf2b4;
+  box-shadow:
+    0 0 0 4px rgba(124, 242, 180, 0.18),
+    0 0 12px rgba(124, 242, 180, 0.9);
+}
+
+.footerNote {
+  margin-top: 0.75rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #8abfa1;
+  opacity: 0.9;
+  border-top: 1px dashed rgba(124, 242, 180, 0.25);
+  padding-top: 0.75rem;
+}
+
+@media (max-width: 480px) {
+  .construction-card-root {
+    padding: 2rem 1.6rem 1.6rem;
+    border-radius: 1.25rem;
+  }
+
+  .devSvg {
+    width: 150px;
+    height: 150px;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+}
